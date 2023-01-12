@@ -11,3 +11,4 @@ fetch('https://exchangerate-api.p.rapidapi.com/rapid/latest/USD', options)
 	.then(response => response.json())
 	.then(response => console.log(response))
 	.catch(err => console.error(err));
+console.log("hello")

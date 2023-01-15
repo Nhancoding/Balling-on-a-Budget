@@ -4,11 +4,11 @@ var fetch = require('node-fetch');
 var url = 'https://dad-jokes.p.rapidapi.com/random/joke';
 
 var dadjokeAPI = {
-  method: 'GET',
-  headers: {
-    'X-RapidAPI-Key': 'f5fab70728msh40aaace1ce86804p1f0dd9jsn7ef8e820d71d',
-    'X-RapidAPI-Host': 'dad-jokes.p.rapidapi.com'
-  }
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'f5fab70728msh40aaace1ce86804p1f0dd9jsn7ef8e820d71d',
+		'X-RapidAPI-Host': 'dad-jokes.p.rapidapi.com'
+	}
 };
 
 fetch(url, dadjokeAPI)

@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1>Balling on a Budget</h1>
-    <div class="Budget Amount"> 
+    <div id="container" class="Budget Amount"> 
         <h3 id="amount">Ready to Travel?</h3>
         <form id="travel-budget" class=" form w-100">
             <input id="budget-input" class="form-input w-50" type="value" placeholder="Enter budget here">
@@ -26,7 +26,7 @@
                 <option value="THB">Thailand</option>
             </select>
             <!-- AM comment: Currency conversion function needs to be linked to "onclick below" for when user clicks "Let's Go!" button -->
-            <button id="destinations" onclick="currencyConversionFunction()">Let's Go!</button>
+            <button id="destinations" onclick="renderAPIArray()">Let's Go!</button>
     </div>
     <script src="./script.js"></script>
 </body>

@@ -12,10 +12,26 @@
         <h1>Balling on a Budget APP</h1>
         <p id="joke">joke</p>
     </header>
+<body>
+    <h1>Balling on a Budget</h1>
     <div class="Budget Amount"> 
-        <h3 id="amount">Amount</h3>
-        <button id="show-options"> show-options</button>
-        <button id="destinations"> destinations</button>
+        <h3 id="amount">Ready to Travel?</h3>
+        <form id="travel-budget" class=" form w-100">
+            <input id="budget-input" class="form-input w-50" type="value" placeholder="Enter budget here">
+            <select id="format-input" class="form-input w-50">
+                <option value="" disabled selected>Choose Destination</option>
+                <option value="ARS">Argentina</option>
+                <option value="AUD">Australia</option>
+                <option value="BRL">Brazil</option>
+                <option value="CNY">China</option>
+                <option value="IDR">Indonesia</option>
+                <option value="JMD">Jamaica</option>
+                <option value="MAD">Morocco</option>
+                <option value="SCR">Seychelles</option>
+                <option value="THB">Thailand</option>
+            </select>
+            <!-- AM comment: Currency conversion function needs to be linked to "onclick below" for when user clicks "Let's Go!" button -->
+            <button id="destinations" onclick="currencyConversionFunction()">Let's Go!</button>
     </div>
     <script src="./script.js"></script>
 </body>

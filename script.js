@@ -21,13 +21,33 @@ var ExchangeRateAPI = {
 		'X-RapidAPI-Host': 'exchangerate-api.p.rapidapi.com'
 	}
 };
-
+function fetchCurrencyData (){
+	var resultsEx;
+	
 fetch('https://exchangerate-api.p.rapidapi.com/rapid/latest/USD', ExchangeRateAPI)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
+	// const data = await resultsEx.json()
 
-console.log("hello")
+	.then(response => response.json())
+	.then(response => { 
+		// return response
+		getData(response.rates)
+	}) 
+	
+	// })
+
+	// .catch(err => console.error(err));
+	// return resultsEx
+
+}
+// fetch('https://exchangerate-api.p.rapidapi.com/rapid/latest/USD', ExchangeRateAPI)
+// 	.then(response => response.json())
+// 	.then(response => {
+
+// 	})
+
+// 	.catch(err => console.error(err));
+
+// console.log("hello")
 
 // // Countries API Fetch and connect to Destination button
 // function countriesDestinations() {
@@ -44,3 +64,39 @@ console.log("hello")
 //         .then(response => console.log(response))
 //         .catch(err => console.error(err));
 // }
+
+
+//set function to pull data from currency api and render it to the page
+const currentEx = document.querySelector("#format-input")
+const submitBtn = document.querySelector("#destinations")
+const inputAmount = document.getElementById("budget-input")
+submitBtn.addEventListener("click", function(event){
+	event.preventDefault();
+	fetchCurrencyData ()
+	// console.log(rates);
+	console.log(currentEx.value)
+
+})
+
+function getData (ratesArray) {
+	console.log(ratesArray);
+	console.log(currentEx.value)
+	console.log(ratesArray [currentEx.value]);
+	console.log(ratesArray [currentEx.value] * inputAmount.value);
+}
+// function renderAPIArray(ExchangeRateAPI) {
+// 	fetch('https://exchangerate-api.p.rapidapi.com/rapid/latest/USD', ExchangeRateAPI)
+// 	  .then(response => response.json())
+// 	  .then(data => {
+// 		let array = data.array;
+// 		let container = document.getElementById("container");
+// 		for (let i = 0; i < data.length; i++) {
+// 		  let item = document.createElement("p");
+// 		  item.innerHTML = array[i];
+// 		  container.appendChild(item);
+// 		}
+// 	  });
+//   }
+  
+
+//render a card that shows the amount the user entered, the exchange rate with the currency, the result. Also display which country the currency was exchange into

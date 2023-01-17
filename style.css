@@ -1,9 +1,0 @@
-body {
-    height: 100vh;
-    background: green ;
-    background-image: linear-gradient(to bottom right, rgb(119, 156, 127), rgb(21, 44, 27));
-}
-
-footer {
-    margin-top: 100vh
-}

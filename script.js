@@ -83,6 +83,12 @@ function getData (ratesArray) {
 	console.log(currentEx.value)
 	console.log(ratesArray [currentEx.value]);
 	console.log(ratesArray [currentEx.value] * inputAmount.value);
+	var conversionContainer = document.getElementById("conversion-display");
+	conversionContainer.innerHTML = "";
+	var convertedAmt = (ratesArray [currentEx.value] * inputAmount.value);
+	var conversionAmtEl = document.createElement("p");
+	conversionAmtEl.innerText = convertedAmt;
+	conversionContainer.append(conversionAmtEl);
 }
 // function renderAPIArray(ExchangeRateAPI) {
 // 	fetch('https://exchangerate-api.p.rapidapi.com/rapid/latest/USD', ExchangeRateAPI)

@@ -45,7 +45,7 @@ fetch('https://countries-cities.p.rapidapi.com/location/country/list', countries
 
 
 
-	const currentEx = document.querySelector("#format-input")
+const currentEx = document.querySelector("#format-input")
 const submitBtn = document.querySelector("#destinations")
 const inputAmount = document.getElementById("budget-input")
 submitBtn.addEventListener("click", function(event){
@@ -102,3 +102,4 @@ function getData (ratesArray) {
 	conversionAmtEl.innerText = convertedAmt;
 	conversionContainer.append(conversionAmtEl);
 }
+getData()

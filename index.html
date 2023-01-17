@@ -5,19 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Balling on a budget APP</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="./assets/style.css">
 </head>
+
 <body>
-    <div class="columns">
+    <div class="flex-row bg-bisque content">
+
     <div>
-        <h1 class="columns is-full">Balling on a budget APP</h1>
+        <h1 class="highlight w3-center">Balling on a budget APP</h1>
     </div>
     <div class="w3-card-4">
-    </div>
-    <br>
-    <div class="w3-card-4">
-        <div class="columns">
+        <div class="w3-container w3-center">
+         <p>dad joke</p>
+         <button class="btn btn-info btn-block w3-button w3-purple">HAHA!</button>
+        </div>
+      </div>
+      <br>
+      <div class="w3-card-4">
+        <div class="w3-container w3-center">
             <h3 id="amount">Ready to Travel?</h3>
             <form id="travel-budget" class="form w-100">
                 <input id="budget-input" class="form-input w-50" type="value" placeholder="Enter budget here">
@@ -37,16 +43,11 @@
                 </select>
                 <br>
                 <br>
-                <!-- AM comment: Currency conversion function needs to be linked to "onclick below" for when user clicks "Let's Go!" button -->
+                 <!-- AM comment: Currency conversion function needs to be linked to "onclick below" for when user clicks "Let's Go!" button -->
             <button id="destinations" onclick="currencyConversionFunction()">Let's Go!</button>
         </div>
-    </div>
-    </div>
+      </div>
+ </div>
     <script src="./assets/script.js"></script>
 </body>
-<footer>
-    <div class="w3-container w3-center">
-        <p id="joke"></p>
-    </div>
-</footer>
 </html>

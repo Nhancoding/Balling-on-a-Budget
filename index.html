@@ -10,13 +10,13 @@
 </head>
 <body>
     <div class="flex-row bg-bisque content">
-    <div>
-        <h1 class="columns is-full">Balling on a budget APP</h1>
-    </div>
+        <header>
+            <h1 class="">Balling on a budget APP</h1>
+        </header>
     <div class="w3-card-4">
     </div>
     <br>
-    <div class="w3-card-4">
+    <main class="w3-card-4">
         <div class="w3-container w3-center">
             <h3 id="amount">Ready to Travel?</h3>
             <form id="travel-budget" class="form w-100">
@@ -40,14 +40,15 @@
                 <!-- AM comment: Currency conversion function needs to be linked to "onclick below" for when user clicks "Let's Go!" button -->
             <button id="destinations" onclick="currencyConversionFunction()">Let's Go!</button>
         </div>
-      </div>
-      <div id="conversion-display"></div>
+    </main>
+    <section id="conversion-display">
+    </section>
  </div>
     <script src="./assets/script.js"></script>
 </body>
 <footer>
     <div class="w3-container w3-center">
-        <p id="joke"></p>
+        <h3 id="joke"></h3>
     </div>
 </footer>
 </html>

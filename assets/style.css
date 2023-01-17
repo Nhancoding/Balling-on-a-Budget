@@ -5,7 +5,7 @@ body {
     height: 100vh;
     /* background: green ; */
     background-image: linear-gradient(to bottom right, rgb(119, 156, 127), rgb(21, 44, 27));
-    /* background-image: url("./images/globe.png"); */
+    /* background-image: url("./images/globe3.png"); */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -32,3 +32,5 @@ footer {
     font-size: large;
     font-weight: 500;
 }
+
+

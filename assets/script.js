@@ -42,3 +42,63 @@ fetch('https://countries-cities.p.rapidapi.com/location/country/list', countries
 	.then(response => response.json())
 	.then(response => console.log(response))
 	.catch(err => console.error(err));
+
+
+
+	const currentEx = document.querySelector("#format-input")
+const submitBtn = document.querySelector("#destinations")
+const inputAmount = document.getElementById("budget-input")
+submitBtn.addEventListener("click", function(event){
+	event.preventDefault();
+	fetchCurrencyData ()
+	// console.log(rates);
+	console.log(currentEx.value)
+
+})
+
+
+
+
+
+
+// Exchange rate API
+var ExchangeRateAPI = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '26204d0e98msh01983f4e2c59185p114480jsn49cd66599ba4',
+		'X-RapidAPI-Host': 'exchangerate-api.p.rapidapi.com'
+	}
+};
+function fetchCurrencyData (){
+	var resultsEx;
+	
+fetch('https://exchangerate-api.p.rapidapi.com/rapid/latest/USD', ExchangeRateAPI)
+	// const data = await resultsEx.json()
+
+	.then(response => response.json())
+	.then(response => { 
+		// return response
+		getData(response.rates)
+	}) 
+	
+	// })
+
+	// .catch(err => console.error(err));
+	// return resultsEx
+
+}
+
+
+
+function getData (ratesArray) {
+	console.log(ratesArray);
+	console.log(currentEx.value)
+	console.log(ratesArray [currentEx.value]);
+	console.log(ratesArray [currentEx.value] * inputAmount.value);
+	var conversionContainer = document.getElementById("conversion-display");
+	conversionContainer.innerHTML = "";
+	var convertedAmt = (ratesArray [currentEx.value] * inputAmount.value);
+	var conversionAmtEl = document.createElement("p");
+	conversionAmtEl.innerText = convertedAmt;
+	conversionContainer.append(conversionAmtEl);
+}

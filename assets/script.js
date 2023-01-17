@@ -90,3 +90,4 @@ function getData (ratesArray) {
 	var conversionAmtEl = document.createElement("p");
 	conversionAmtEl.innerText = convertedAmt;
 	conversionContainer.append(conversionAmtEl);
+}

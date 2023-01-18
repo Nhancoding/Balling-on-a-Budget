@@ -164,7 +164,7 @@ function appendFoods(funFood) {
 		// console.log(funFoodsObj.Thailand);
 	
 	// create li
-	var foodItem = document.createElement("li")
+	var foodItem = document.createElement("p")
 	foodItem.textContent = funFood[i]
 	//append to page
 	foodsList.append(foodItem);

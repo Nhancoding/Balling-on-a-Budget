@@ -35,7 +35,9 @@ section {
     font-size: larger;
 }
 
-
+#foods {
+    text-align: center;
+}
 
 .conversion-display {
     text-align: center;

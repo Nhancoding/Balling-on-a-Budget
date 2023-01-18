@@ -19,6 +19,7 @@ fetch("https://dad-jokes-by-api-ninjas.p.rapidapi.com/v1/dadjokes", dadJokesAPI)
     }
   });
 
+
 // Countries API Fetch
 var countriesAPI = {
   method: "GET",
@@ -70,6 +71,7 @@ function fetchCurrencyData() {
       // return response
       getData(response.rates);
     });
+
 
   // })
 

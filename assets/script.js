@@ -20,23 +20,6 @@ fetch("https://dad-jokes-by-api-ninjas.p.rapidapi.com/v1/dadjokes", dadJokesAPI)
   });
 
 
-// Countries API Fetch
-var countriesAPI = {
-  method: "GET",
-  headers: {
-    "X-RapidAPI-Key": "86dd07a4d7msh506dceb978bc41dp168ab6jsnc3ac1a21306b",
-    "X-RapidAPI-Host": "countries-cities.p.rapidapi.com",
-  },
-};
-
-fetch(
-  "https://countries-cities.p.rapidapi.com/location/country/list",
-  countriesAPI
-)
-  .then((response) => response.json())
-  .then((response) => console.log(response))
-  .catch((err) => console.error(err));
-
 const currentEx = document.querySelector("#format-input");
 const submitBtn = document.querySelector("#destinations");
 const inputAmount = document.getElementById("budget-input");

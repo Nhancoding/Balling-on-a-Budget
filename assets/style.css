@@ -1,15 +1,48 @@
 *{
     color: black;
+    font-family: Arial, Helvetica, sans-serif;
 }
-body {     
+body, footer {     
+    background: linear-gradient(to bottom right, rgb(119, 156, 127), rgb(21, 44, 27));
+
+}
+
+body {
     height: 100vh;
+<<<<<<< HEAD
+    /* background-image: url("./images/globe.png"); */
+=======
     /* background: green ; */
     background-image: linear-gradient(to bottom right, rgb(119, 156, 127), rgb(21, 44, 27));
-    /* background-image: url("./images/globe.png"); */
+    /* background-image: url("./images/globe3.png"); */
+>>>>>>> dev
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     display: block;
+}
+
+header {
+    position: relative;
+    top: 0;
+    text-align: center;
+}
+
+main {
+    border-radius: 20px;
+    padding: 2px;
+    margin-left: 500px;
+    margin-right: 500px;
+    padding-bottom: 10px;
+}
+
+section {
+    text-align: center;
+    font-size: larger;
+}
+
+.conversion-display {
+    text-align: center;
 }
 
 .content{
@@ -28,7 +61,18 @@ margin: auto;
 }
 
 footer {
+<<<<<<< HEAD
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+=======
     margin-top: 60vh;
     font-size: large;
     font-weight: 500;
 }
+
+
+>>>>>>> dev
